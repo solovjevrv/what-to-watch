@@ -1,0 +1,13 @@
+@import "fonts";
+@import "variables";
+@import "components/button";
+
+body {
+	font-size: 16px;
+	font-family: "IBM Plex";
+	box-sizing: border-box;
+	background: $background;
+}
+h1 {
+	color: $text-on-color;
+}

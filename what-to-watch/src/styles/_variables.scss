@@ -1,0 +1,54 @@
+// Colors
+
+//Buttons
+$button-primary: #0f62fe;
+$button-primary-hover: #0353e9;
+$button-primary-active: #002d9c;
+$button-secondary: #6f6f6f;
+$button-secondary-hover: #606060;
+$button-secondary-active: #393939;
+$button-tertiary: #ffffff;
+$button-tertiary-hover: #f4f4f4;
+$button-tertiary-active: #c6c6c6;
+$button-danger-primary: #da1e28;
+$button-danger-secondary: #ff8389;
+$button-danger-hover: #ba1b23;
+$button-danger-active: #750e13;
+$button-separator: #161616;
+$button-disabled: #6f6f6f;
+
+// Focus Tokens
+$focus: #ffffff;
+$focus-inset: #161616;
+$focus-inverse: #0f62fe;
+//Text
+$text-primary: #f4f4f4;
+$text-secondary: #c6c6c6;
+$text-placeholder: #6f6f6f;
+$text-on-color: #ffffff;
+$text-helper: #8d8d8d;
+$text-error: #ff8389;
+$text-inverse: #161616;
+$text-disabled: #f4f4f440;
+// $text-on-color-disabled: #F4F4F440;
+
+//Links
+$link-primary: #78a9ff;
+$link-primary-hover: #a6c8ff;
+$link-secondary: #a6c8ff;
+$link-inverse: #0f62fe;
+$link-visited: #be95ff;
+
+//Borders
+$border-subtle-00: #525252;
+$border-white: #ffffff;
+
+//Backgrounds
+$background: #262626;
+$background-active: rgba(#8d8d8d, $alpha: 0.4);
+$background-hover: rgba(#8d8d8d, $alpha: 0.16);
+$background-selected: rgba(#8d8d8d, $alpha: 0.24);
+$background-selected-hover: rgba(#8d8d8d, $alpha: 0.32);
+$background-brand: #0f62fe;
+$background-inverse: #f4f4f4;
+$background-inverse-hover: #e5e5e5;
