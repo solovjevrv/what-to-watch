@@ -2,5 +2,17 @@
     font-family: "IBM Plex";
     font-weight: normal;
     font-style: normal;
-    src: url(./../assets/fonts/IBMPlexSans-Regular.ttf) format("truetype");
+    src: url(./fonts/IBMPlexSans-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Carbon";
+    src: url("./../styles/fonts/icons/carbon.eot");
+    src:
+        url("./../styles/fonts/icons/carbon.eot") format("embedded-opentype"),
+        url("./../styles/fonts/icons/carbon.ttf") format("truetype"),
+        url("./../styles/fonts/icons/carbon.woff") format("woff"),
+        url("./../styles/fonts/icons/carbon.woff2") format("woff2"),
+        url("./../styles/fonts/icons/carbon.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }

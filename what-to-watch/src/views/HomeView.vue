@@ -1,22 +1,31 @@
 <template>
   <div class="home">
     <h1>Something Title</h1>
-    <c-button kind="primary" @click="func">Button</c-button>
-    <c-button kind="secondary" @click="func">Button</c-button>
-    <c-button kind="tertiary" @click="func">Button</c-button>
-    <c-button kind="ghost" @click="func">Button</c-button>
-    <c-button kind="danger" @click="func">Button</c-button>
-    <c-button kind="danger-tertiary" @click="func">Button</c-button>
-    <c-button kind="danger-ghost" @click="func">Button</c-button>
+    <div>
+      <cv-button kind="primary" @click="func">Button</cv-button>
+      <cv-button kind="secondary" @click="func">Button</cv-button>
+      <cv-button kind="tertiary" @click="func">Button</cv-button>
+      <cv-button kind="ghost" @click="func">Button</cv-button>
+      <cv-button kind="danger" @click="func">Button</cv-button>
+      <cv-button kind="danger-tertiary" @click="func">Button</cv-button>
+      <cv-button kind="danger-ghost" @click="func">Button</cv-button>
+    </div>
+    <cv-text-input
+      inline
+      hide-label=""
+      placeholder="Input Login here"
+    ></cv-text-input>
   </div>
 </template>
 
 <script>
-import cButton from '@/components/basic-ui-components/Button.vue';
+import cvButton from '@/components/basic-ui-components/Button.vue';
+import cvTextInput from '@/components/basic-ui-components/TextInput.vue';
 export default {
   name: 'HomeView',
   components: {
-    cButton,
+    cvButton,
+    cvTextInput,
   },
   methods: {
     func() {

@@ -1,0 +1,39 @@
+// Text Mixins
+
+@mixin label-text {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+}
+@mixin helper-text {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+}
+@mixin input-text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+}
+@mixin placeholder-text {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+}
+
+// Interactive Mixins
+@mixin focus {
+  outline: none;
+  border: 1px solid $focus;
+  box-shadow:
+    inset 0 0 0 1px $focus,
+    inset 0 0 0 2px $focus-inset;
+}
+
+// Border
+@mixin input-border {
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid $border-strong-01;
+}

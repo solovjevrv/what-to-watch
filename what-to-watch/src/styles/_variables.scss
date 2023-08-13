@@ -17,7 +17,7 @@ $button-danger-active: #750e13;
 $button-separator: #161616;
 $button-disabled: #6f6f6f;
 
-// Focus Tokens
+// Focus
 $focus: #ffffff;
 $focus-inset: #161616;
 $focus-inverse: #0f62fe;
@@ -41,7 +41,21 @@ $link-visited: #be95ff;
 
 //Borders
 $border-subtle-00: #525252;
-$border-white: #ffffff;
+$border-subtle-01: #525252;
+$border-subtle-02: #6f6f6f;
+$border-subtle-03: #8d8d8d;
+$border-subtle-selected-01: #6f6f6f;
+$border-subtle-selected-02: #8d8d8d;
+$border-subtle-selected-03: #a8a8a8;
+$border-strong-01: #8d8d8d;
+$border-strong-02: #a8a8a8;
+$border-strong-03: #c6c6c6;
+$border-inverse: #f4f4f4;
+$border-interactive: #4589ff;
+$border-disabled: #8d8d8d;
+$border-tile-01: #6f6f6f;
+$border-tile-02: #8d8d8d;
+$border-tile-03: #a8a8a8;
 
 //Backgrounds
 $background: #262626;
@@ -52,3 +66,11 @@ $background-selected-hover: rgba(#8d8d8d, $alpha: 0.32);
 $background-brand: #0f62fe;
 $background-inverse: #f4f4f4;
 $background-inverse-hover: #e5e5e5;
+
+// Fields
+$field-01: #393939;
+$field-02: #525252;
+$field-03: #6f6f6f;
+$field-hover-01: #474747;
+$field-hover-02: #636363;
+$field-hover-03: #5e5e5e;

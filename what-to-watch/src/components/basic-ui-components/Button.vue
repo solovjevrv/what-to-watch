@@ -1,9 +1,9 @@
 <template>
   <button
-    class="c-button"
+    class="cv-button"
     :class="[
-      kind ? 'c-button--' + kind : '',
-      size ? 'c-button--size-' + size : '',
+      kind ? 'cv-button--' + kind : '',
+      size ? 'cv-button--size-' + size : '',
       {'c-button--is-disabled': disabled},
     ]"
     :disabled="disabled"
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-  name: 'c-button',
+  name: 'cv-button',
   props: {
     nativeType: {
       type: String,
@@ -42,5 +42,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

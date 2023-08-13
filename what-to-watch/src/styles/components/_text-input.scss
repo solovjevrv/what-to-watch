@@ -1,0 +1,30 @@
+.cv-text-input {
+	display: flex;
+	flex-direction: column;
+	&--is-inline {
+		display: inline-flex;
+	}
+	&__label {
+		color: $text-secondary !important;
+		@include label-text;
+		margin-bottom: 8px;
+	}
+	&__field {
+		padding: 15px 101px 15px 16px;
+		margin-bottom: 4px;
+		@include input-text;
+		background: $field-01;
+		color: $text-primary;
+		@include input-border;
+		&::placeholder {
+			color: $text-placeholder;
+		}
+		&:focus {
+			@include focus;
+		}
+	}
+	&__helper-text {
+		@include helper-text;
+		color: $text-secondary;
+	}
+}
