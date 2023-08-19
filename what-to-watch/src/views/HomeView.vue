@@ -10,12 +10,7 @@
       <cv-button kind="danger-tertiary" @click="func">Button</cv-button>
       <cv-button kind="danger-ghost" @click="func">Button</cv-button>
     </div>
-    <cv-text-input
-      v-model="input"
-      inline
-      size="md"
-      status="error"
-    ></cv-text-input>
+    <cv-text-input v-model="input" inline></cv-text-input>
   </div>
 </template>
 
