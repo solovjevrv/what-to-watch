@@ -1,21 +1,34 @@
 <template>
   <div class="home">
-    <h1>Something Title</h1>
-    <div>
-      <cv-button kind="primary" @click="func">Button</cv-button>
-      <cv-button kind="secondary" @click="func">Button</cv-button>
-      <cv-button kind="tertiary" @click="func">Button</cv-button>
-      <cv-button kind="ghost" @click="func">Button</cv-button>
-      <cv-button kind="danger" @click="func">Button</cv-button>
-      <cv-button kind="danger-tertiary" @click="func">Button</cv-button>
-      <cv-button kind="danger-ghost" @click="func">Button</cv-button>
+    <div style="width: 40%; padding: 10%">
+      <h1>Login Form</h1>
+      <cv-text-input
+        style="margin-bottom: 30px"
+        name="login"
+        v-model="username"
+        type="text"
+        status="warning"
+        size="md"
+        label-text="Login"
+        helper-text="Login must match email"
+      ></cv-text-input>
+      <cv-text-input
+        style="margin-bottom: 30px"
+        name="password"
+        v-model="password"
+        type="password"
+        status="warning"
+        size="md"
+        label-text="Password"
+        helper-text="Do you remember your password?"
+      ></cv-text-input>
+      <p style="margin-bottom: 30px">
+        <a style="color: white; text-decoration: none" href="#"
+          >Foggot your password?</a
+        >
+      </p>
+      <cv-button kind="primary" size="md" @click="login()">Sing In</cv-button>
     </div>
-    <cv-text-input
-      id="loginInput"
-      name="login"
-      v-model="input"
-      inline
-    ></cv-text-input>
   </div>
 </template>
 
@@ -31,12 +44,16 @@ export default {
   },
   data() {
     return {
-      input: '',
+      username: null,
+      password: null,
     };
   },
   methods: {
-    func() {
-      console.log('Event!');
+    login() {
+      console.log({
+        username: this.username,
+        password: this.password,
+      });
     },
   },
 };

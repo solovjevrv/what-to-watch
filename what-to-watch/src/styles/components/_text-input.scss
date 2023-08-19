@@ -1,11 +1,13 @@
 .cv-text-input {
 	display: flex;
 	flex-direction: column;
-	&--is-inline {
-		display: inline-flex;
-	}
+	align-items: flex-start;
 	&__wrapper {
 		position: relative;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		width: 100%;
 	}
 	&__label {
 		color: $text-secondary !important;
@@ -13,7 +15,7 @@
 		margin-bottom: 8px;
 	}
 	&__field {
-		// padding: 15px 101px 15px 16px;
+		width: 100%;
 		@include input-text;
 		background: $field-01;
 		color: $text-primary;
@@ -31,13 +33,35 @@
 		color: $text-secondary;
 		margin-top: 4px;
 	}
+	&__interactive-block {
+		display: flex;
+		align-items: center;
+		position: absolute;
+	}
 	.cv-status-icon {
-		svg {
-			position: absolute;
-			top: 50%;
-			right: 16px;
-			transform: translateY(-50%);
-		}
+		display: flex;
+		align-items: center;
+		padding-right: 16px;
+	}
+	&__toggle-password {
+		display: inline-flex;
+		background: transparent;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		color: $icon-primary;
+		padding: 8px 16px 8px 0px;
+	}
+}
+// inline or full-width input {
+.cv-text-input--is-inline {
+	display: inline-flex;
+}
+.cv-text-input--is-inline .cv-text-input__wrapper {
+	width: unset;
+	.cv-text-input__field {
+		width: unset;
 	}
 }
 // statuses for input
@@ -61,6 +85,10 @@
 	.cv-text-input__field {
 		cursor: not-allowed;
 		background: transparent;
+	}
+	.cv-text-input__toggle-password {
+		color: $icon-disabled;
+		cursor: not-allowed;
 	}
 }
 

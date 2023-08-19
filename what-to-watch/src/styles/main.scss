@@ -13,6 +13,7 @@ body {
 	box-sizing: border-box;
 	background: $background;
 	margin: 0;
+	color: $text-primary;
 }
 
 i[class^="cv-icon-"] {
@@ -24,4 +25,15 @@ i[class^="cv-icon-"] {
 }
 h1 {
 	color: $text-on-color;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+	-webkit-text-fill-color: $text-primary;
+	-webkit-box-shadow: 0 0 0px 40rem $field-02 inset;
+	@include input-border;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	outline: none;
 }

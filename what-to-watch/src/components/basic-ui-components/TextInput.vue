@@ -15,7 +15,7 @@
       <input
         class="cv-text-input__field"
         :placeholder="placeholder"
-        type="text"
+        :type="naviteType"
         :id="id"
         :name="name"
         :disabled="readonly"
@@ -23,7 +23,22 @@
         @input="handleInput"
         @change="handleChange"
       />
-      <cv-status-icon :type="status"></cv-status-icon>
+      <div class="cv-text-input__interactive-block">
+        <cv-status-icon :type="status"></cv-status-icon>
+        <button
+          v-show="type == 'password'"
+          class="cv-text-input__toggle-password"
+          type="button"
+          :disabled="readonly"
+          @click="togglePasswordView()"
+        >
+          <i
+            :class="
+              naviteType == 'password' ? 'cv-icon-view' : 'cv-icon-view-off'
+            "
+          ></i>
+        </button>
+      </div>
     </div>
     <span class="cv-text-input__helper-text">{{ helperText }}</span>
   </div>
@@ -38,7 +53,6 @@ export default {
   name: 'cv-text-input',
   props: {
     value: {
-      type: String,
       required: true,
     },
     id: {
@@ -46,6 +60,10 @@ export default {
     },
     name: {
       type: String,
+    },
+    type: {
+      type: String,
+      default: 'text',
     },
     labelText: {
       type: String,
@@ -80,12 +98,28 @@ export default {
       default: 'md',
     },
   },
+  data() {
+    return {
+      naviteType: 'text',
+    };
+  },
   methods: {
     handleInput(event) {
       this.$emit('input', event.target.value);
     },
     handleChange(event) {
       this.$emit('change', event.target.value);
+    },
+    togglePasswordView() {
+      this.naviteType = this.naviteType == 'text' ? 'password' : 'text';
+    },
+  },
+  mounted() {
+    this.naviteType = this.type;
+  },
+  watch: {
+    type(val) {
+      this.naviteType = val;
     },
   },
 };
