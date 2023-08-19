@@ -4,18 +4,21 @@
 	&--is-inline {
 		display: inline-flex;
 	}
+	&__wrapper {
+		position: relative;
+	}
 	&__label {
 		color: $text-secondary !important;
 		@include label-text;
 		margin-bottom: 8px;
 	}
 	&__field {
-		padding: 15px 101px 15px 16px;
-		margin-bottom: 4px;
+		// padding: 15px 101px 15px 16px;
 		@include input-text;
 		background: $field-01;
 		color: $text-primary;
 		@include input-border;
+		line-height: 0;
 		&::placeholder {
 			color: $text-placeholder;
 		}
@@ -26,5 +29,55 @@
 	&__helper-text {
 		@include helper-text;
 		color: $text-secondary;
+		margin-top: 4px;
+	}
+	.cv-status-icon {
+		svg {
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			transform: translateY(-50%);
+		}
+	}
+}
+// statuses for input
+.cv-text-input--error {
+	.cv-text-input__field {
+		@include input-border--error;
+	}
+	.cv-text-input__helper-text {
+		color: $text-error;
+	}
+}
+
+.cv-text-input--warning,
+.cv-text-input--info {
+	.cv-text-input__helper-text {
+		color: $text-primary;
+	}
+}
+
+.cv-text-input--readonly {
+	.cv-text-input__field {
+		cursor: not-allowed;
+		background: transparent;
+	}
+}
+
+//sizes for input
+
+.cv-text-input--lg {
+	.cv-text-input__field {
+		padding: 15px 48px 15px 16px;
+	}
+}
+.cv-text-input--md {
+	.cv-text-input__field {
+		padding: 11px 48px 11px 16px;
+	}
+}
+.cv-text-input--sm {
+	.cv-text-input__field {
+		padding: 7px 48px 7px 16px;
 	}
 }

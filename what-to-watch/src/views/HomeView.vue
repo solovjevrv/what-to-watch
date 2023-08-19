@@ -11,9 +11,10 @@
       <cv-button kind="danger-ghost" @click="func">Button</cv-button>
     </div>
     <cv-text-input
+      v-model="input"
       inline
-      hide-label=""
-      placeholder="Input Login here"
+      size="md"
+      status="error"
     ></cv-text-input>
   </div>
 </template>
@@ -21,11 +22,18 @@
 <script>
 import cvButton from '@/components/basic-ui-components/Button.vue';
 import cvTextInput from '@/components/basic-ui-components/TextInput.vue';
+
 export default {
   name: 'HomeView',
   components: {
     cvButton,
     cvTextInput,
+  },
+  data() {
+    return {
+      input: '',
+      flag: false,
+    };
   },
   methods: {
     func() {
