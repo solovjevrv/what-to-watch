@@ -10,7 +10,12 @@
       <cv-button kind="danger-tertiary" @click="func">Button</cv-button>
       <cv-button kind="danger-ghost" @click="func">Button</cv-button>
     </div>
-    <cv-text-input v-model="input" inline></cv-text-input>
+    <cv-text-input
+      id="loginInput"
+      name="login"
+      v-model="input"
+      inline
+    ></cv-text-input>
   </div>
 </template>
 
@@ -27,7 +32,6 @@ export default {
   data() {
     return {
       input: '',
-      flag: false,
     };
   },
   methods: {

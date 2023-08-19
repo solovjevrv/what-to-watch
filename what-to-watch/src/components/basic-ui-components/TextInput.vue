@@ -8,7 +8,7 @@
       {'cv-text-input--readonly': readonly},
     ]"
   >
-    <label v-if="!hideLabel" class="cv-text-input__label" for="name">{{
+    <label v-if="!hideLabel" class="cv-text-input__label" :for="name">{{
       labelText
     }}</label>
     <div class="cv-text-input__wrapper">
@@ -16,8 +16,8 @@
         class="cv-text-input__field"
         :placeholder="placeholder"
         type="text"
-        id=""
-        name="name"
+        :id="id"
+        :name="name"
         :disabled="readonly"
         :value="value"
         @input="handleInput"
@@ -40,6 +40,9 @@ export default {
     value: {
       type: String,
       required: true,
+    },
+    id: {
+      type: String,
     },
     name: {
       type: String,
